@@ -7,7 +7,7 @@
 body {
   font-family: 'Fredoka', sans-serif;
   background-color: #000000;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)), url("../Assets/img/BG.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)), url("../img/BG.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
