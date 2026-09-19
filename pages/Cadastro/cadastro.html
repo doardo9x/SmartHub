@@ -6,11 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS geral -->
-    <link rel="stylesheet" href="style.css">
-
     <!-- CSS do cadastro -->
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../../css/cadastro.css">
 
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,24 +15,25 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Cadastro - SquadHub</title>
+    <title>Cadastro|SquadHub</title>
 </head>
 
 
 <body>
 
     <main class="pagina-cadastro">
+
         <nav class="menu-topo">
 
             <div class="menu-esquerda"></div>
 
             <div class="menu-links">
 
-                <a href="informacoes.html" class="botao-menu">
-                    INFORMAÇÕES TÉCNICAS
+                <a href="../../pages/InformacoesTecnicas/InformacoesTecnicas.html" class="botao-menu">
+                    INFORMAÇÕES ADICIONAIS
                 </a>
 
-                <a href="login.html" class="botao-menu botao-entrar">
+                <a href="../EmBreve/EmBreve.html" class="botao-menu botao-entrar">
                     ENTRAR
                 </a>
 
@@ -62,7 +60,7 @@
                 </div>
 
                 <div class="logo-container">
-                    <img src="Assets/img/SquadHub Logo.png" alt="Logo SquadHub" class="logo-squadhub">
+                    <img src="../../img/SquadHub Logo.png" alt="Logo SquadHub" class="logo-squadhub">
                 </div>
 
             </section>
@@ -70,7 +68,8 @@
 
             <section class="cadastro-formulario">
 
-                <form class="formulario" onsubmit="window.location.href='pages/Retorno Cadastro/RetornoCadastro.html'; return false;">
+                <form class="formulario"
+                    onsubmit="window.location.href='../RetornoCadastro/RetornoCadastro.html'; return false;">
 
                     <div class="formulario-titulo">
 
@@ -93,7 +92,8 @@
                             NOME DE USUÁRIO
                         </label>
 
-                        <input type="text" id="usuario" name="usuario" placeholder="DIGITE SEU NOME DE USUÁRIO" required>
+                        <input type="text" id="usuario" name="usuario" placeholder="DIGITE SEU NOME DE USUÁRIO"
+                            required>
 
                     </div>
 
@@ -117,10 +117,23 @@
                             SENHA
                         </label>
 
-                        <input type="password" id="senha" name="senha" placeholder="DIGITE SUA SENHA" required>
+                        <input type="password" id="senha" name="senha" placeholder="DIGITE SUA SENHA" minlength="8"
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                            title="A senha deve ter no mínimo 8 caracteres, incluindo letra maiúscula, minúscula, número e caractere especial."
+                            required>
 
+                        <div class="requisitos-senha">
+                            <p>A senha deve conter:</p>
+
+                            <ul>
+                                <li id="req-tamanho">8 caracteres no mínimo</li>
+                                <li id="req-maiuscula">Uma letra maiúscula</li>
+                                <li id="req-minuscula">Uma letra minúscula</li>
+                                <li id="req-numero">Um número</li>
+                                <li id="req-especial">Um caractere especial</li>
+                            </ul>
+                        </div>
                     </div>
-
 
                     <div class="campo">
 
@@ -129,9 +142,10 @@
                             CONFIRMAR SENHA
                         </label>
 
-                        <input type="password" id="confirmar-senha" name="confirmar-senha"
-                            placeholder="CONFIRME SUA SENHA" required>
-
+                        <input type="password" id="senha" name="senha" placeholder="CONFIRME SUA SENHA" minlength="8"
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                            title="A senha deve ter no mínimo 8 caracteres, incluindo letra maiúscula, minúscula, número e caractere especial."
+                            required>
                     </div>
 
 
@@ -157,9 +171,20 @@
             </section>
 
         </div>
+        <footer class="rodape">
+
+            <div>
+                <strong>SquadHub</strong>
+                <p>
+                    Encontre sua squad. Jogue junto.
+                </p>
+            </div>
+            <p>
+                Projeto FIAP · 2026
+            </p>
+        </footer>
 
     </main>
-
 </body>
 
 </html>

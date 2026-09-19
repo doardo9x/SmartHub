@@ -1,0 +1,18 @@
+/* =========================================
+   FOOTER
+========================================= */
+.rodape {
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-fraco);
+}
+.rodape strong {
+    color: var(--branco);
+}
+.rodape p {
+    font-size: 0.9rem;
+}
