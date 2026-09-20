@@ -1,8 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root {
+    --cor-fundo: #000000;
+    --cor-textos: #ffffff;
+    --cor-textos-destacados: #991ec5;
+    --cor-efeito-fundo: rgb(30, 194, 197);
+    --verde-brilho: #1b4332;
+    --verde-escuro: #0a1512;
+    --Radius-padrao: 15px;
+
+    --borda: rgba(255, 255, 255, 0.15);
+    --texto-fraco: rgba(255, 255, 255, 0.7);
+    --branco: #ffffff;
+
+    --margem-lateral: 7%;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.cabecalho__nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn__cabecalho {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border: 1px solid var(--cor-textos-destacados);
+    border-radius: var(--Radius-padrao);
+}
+
+body {
+    color: var(--cor-textos);
+    font-family: 'Fredoka', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo {
+    margin: 0 var(--margem-lateral);
+    padding: 2.5rem 0 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: clamp(2rem, 8vw, 8rem);
+    align-items: start;
+}
+
+.conteudo-texto {
+    display: grid;
+    gap: 2.75rem;
+}
+
+.conteudo-imagem {
+    margin: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-introducao {
+    display: block;
+}
+
+.logo-introducao img {
+    display: block;
+    height: 15rem;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.bloco h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.30rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.destaque {
+    color: var(--cor-textos-destacados);
+}
+
+.bloco p {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+
 /* =========================================
    FOOTER
 ========================================= */
 .rodape {
-    padding: 35px 7%;
+    padding: 35px var(--margem-lateral);
     display: flex;
     align-items: center;
     justify-content: space-between;
