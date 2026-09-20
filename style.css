@@ -80,11 +80,12 @@ body {
 
 /* Conteúdo principal */
 .main {
+  height: 70vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 40px 50px;
+  padding: 40px 400px;
   gap: 40px;
 }
 
