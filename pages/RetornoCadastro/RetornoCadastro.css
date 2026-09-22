@@ -7,7 +7,11 @@
     --cor-efeito-fundo: rgb(30, 194, 197);
     --verde-brilho: #1b4332;
     --verde-escuro: #0a1512;
-    --Radius-padrao: 15px
+    --Radius-padrao: 15px;
+
+    --borda: #333333;
+    --texto-fraco: #aaaaaa;
+    --branco: #ffffff;
 }
 
 * {
@@ -136,4 +140,89 @@ body {
 footer {
     width: 100%;
     text-align: center;
+}
+
+
+/* =========================================
+   FOOTER DO SITE
+========================================= */
+
+.rodape-site {
+    width: 100%;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-fraco);
+}
+
+.rodape-site strong {
+    color: var(--branco);
+    font-size: 13px;
+}
+
+.rodape-site p {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .cabecalho__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rodape > * {
+        min-width: 0;
+        padding: 0;
+    }
+
+    .rodape > div:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 20px;
+    }
+
+    .rodape-site {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .secaosuperior h1 {
+        font-size: 1.4rem;
+    }
+
+    .secaosuperior h2 {
+        font-size: 1.2rem;
+    }
+
+    .texto {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 20px;
+    }
+
+    .cabecalho {
+        padding: 20px;
+    }
 }

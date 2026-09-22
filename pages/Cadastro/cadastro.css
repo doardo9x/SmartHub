@@ -462,6 +462,32 @@
 
 
 /* =========================================
+   FOOTER
+========================================= */
+
+.rodape {
+  width: 100%;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-fraco);
+  flex-shrink: 0;
+}
+
+.rodape strong {
+  color: var(--branco);
+  font-size: 13px;
+}
+
+.rodape p {
+  font-size: 11px;
+}
+
+
+/* =========================================
    RESPONSIVIDADE
 ========================================= */
 
@@ -483,36 +509,48 @@
     width: 100%;
     max-width: 440px;
   }
+
+  .menu-topo {
+    position: static;
+    padding: 20px 25px;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .botao-cadastro {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+@media (max-width: 480px) {
 
-.rodape {
-  width: 100%;
+  .cadastro-formulario {
+    padding: 40px 18px;
+  }
 
-  padding: 15px 7%;
+  .formulario-titulo h2 {
+    font-size: 26px;
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .campo input {
+    padding: 0 18px;
+  }
 
-  gap: 25px;
+  .requisitos-senha ul {
+    grid-template-columns: 1fr;
+  }
 
-  border-top: 1px solid var(--borda);
-
-  color: var(--texto-fraco);
-
-  flex-shrink: 0;
-}
-
-.rodape strong {
-  color: var(--branco);
-  font-size: 13px;
-}
-
-.rodape p {
-  font-size: 11px;
+  .botao-cadastro {
+    font-size: 11px;
+  }
 }
