@@ -24,6 +24,10 @@
 .cabecalho {
     width: 100%;
     padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .cabecalho__nav {
@@ -41,6 +45,17 @@
     font-weight: 500;
     font-size: 0.8rem;
     padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 body {
@@ -170,11 +185,30 @@ footer {
 
 @media (max-width: 850px) {
 
-    .cabecalho__nav {
-        flex-wrap: wrap;
-        justify-content: center;
+@media (max-width: 850px) {
+    .cabecalho {
+        justify-content: space-between;
     }
 
+    .menu-btn {
+        display: block;
+    }
+
+    .cabecalho__nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .menu-toggle:checked ~ .cabecalho__nav {
+        display: flex;
+    }
+
+    /* resto do bloco (rodapé) continua igual */
+}
     .rodape {
         flex-direction: column;
         gap: 30px;

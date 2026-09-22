@@ -16,9 +16,20 @@
 }
 
 
-/* =========================================
+/* 
    MENU DO TOPO
-========================================= */
+ */
+
+ .menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
 
 .menu-topo {
   position: absolute;
@@ -27,6 +38,10 @@
   width: 100%;
   padding: 20px 40px;
   z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .menu-links {
@@ -60,9 +75,9 @@
 }
 
 
-/* =========================================
+/* 
    PÁGINA DE CADASTRO
-========================================= */
+ */
 
 .pagina-cadastro {
   position: relative;
@@ -104,9 +119,9 @@
 }
 
 
-/* =========================================
+/* 
    CONTAINER PRINCIPAL
-========================================= */
+ */
 
 .cadastro-container {
   width: 100%;
@@ -121,9 +136,9 @@
 }
 
 
-/* =========================================
+/* 
    LADO ESQUERDO
-========================================= */
+ */
 
 .cadastro-apresentacao {
   position: relative;
@@ -164,9 +179,9 @@
 }
 
 
-/* =========================================
+/* 
    LOGO
-========================================= */
+ */
 
 .logo-container {
   position: absolute;
@@ -188,9 +203,9 @@
 }
 
 
-/* =========================================
+/* 
    LADO DIREITO / FORMULÁRIO
-========================================= */
+ */
 
 .cadastro-formulario {
   display: flex;
@@ -204,9 +219,9 @@
 }
 
 
-/* =========================================
+/* 
    TÍTULO DO FORMULÁRIO
-========================================= */
+ */
 
 .formulario-titulo {
   margin-bottom: 25px;
@@ -235,9 +250,9 @@
 }
 
 
-/* =========================================
+/* 
    CAMPOS DO FORMULÁRIO
-========================================= */
+ */
 
 .campo {
   margin-bottom: 28px;
@@ -283,9 +298,9 @@
 }
 
 
-/* =========================================
+/* 
    REQUISITOS DA SENHA
-========================================= */
+ */
 
 .requisitos-senha {
   margin-top: 10px;
@@ -365,9 +380,9 @@
 }
 
 
-/* =========================================
+/* 
    MENSAGEM DE CONFIRMAÇÃO
-========================================= */
+ */
 
 #mensagem-confirmacao {
   min-height: 12px;
@@ -390,9 +405,9 @@
 }
 
 
-/* =========================================
+/* 
    TERMOS DE USO
-========================================= */
+ */
 
 .termos {
   display: flex;
@@ -418,9 +433,9 @@
 }
 
 
-/* =========================================
+/* 
    BOTÃO DE CADASTRO
-========================================= */
+ */
 
 .botao-cadastro {
   width: 350px;
@@ -461,9 +476,9 @@
 }
 
 
-/* =========================================
+/* 
    FOOTER
-========================================= */
+ */
 
 .rodape {
   width: 100%;
@@ -487,9 +502,9 @@
 }
 
 
-/* =========================================
+/* 
    RESPONSIVIDADE
-========================================= */
+ */
 
 @media (max-width: 850px) {
 
@@ -513,11 +528,24 @@
   .menu-topo {
     position: static;
     padding: 20px 25px;
+    justify-content: space-between;
+  }
+
+  .menu-btn {
+    display: block;
   }
 
   .menu-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .menu-toggle:checked ~ .menu-links {
+    display: flex;
   }
 
   .botao-cadastro {
