@@ -101,6 +101,7 @@ body {
     max-width: 800px;
     font-size: clamp(3.2rem, 7vw, 6.5rem);
     line-height: 0.95;
+    overflow-wrap: break-word;
 }
 .introducao h1 span {
     color: var(--roxo-claro);
@@ -311,7 +312,7 @@ body {
         padding-top: 130px;
     }
     .introducao h1 {
-        font-size: 3.5rem;
+        font-size: 2.6rem;
     }
     .titulo-secao {
         gap: 12px;
@@ -321,5 +322,10 @@ body {
     }
     .card-tecnologia {
         flex-direction: column;
+    }
+}
+@media (max-width: 380px) {
+    .introducao h1 {
+        font-size: 2.1rem;
     }
 }
