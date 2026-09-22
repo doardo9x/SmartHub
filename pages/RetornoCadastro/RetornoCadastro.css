@@ -37,7 +37,6 @@
     font-weight: 500;
     font-size: 0.8rem;
     padding: 10px 20px;
-    border-radius: var(--Radius-padrao);
 }
 
 body {
@@ -104,8 +103,8 @@ body {
     border-radius: var(--Radius-padrao);
 }
 
-.btn:hover {
-    background-color: #320941;
+.btn__cabecalho:hover {
+  background-color: rgba(160, 32, 240, 0.2);
 }
 
 .rodape {
