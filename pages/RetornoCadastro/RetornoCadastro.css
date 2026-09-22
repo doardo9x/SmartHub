@@ -111,7 +111,7 @@ body {
   background-color: rgba(160, 32, 240, 0.2);
 }
 
-.rodape {
+.icones {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,14 +119,14 @@ body {
     width: 100%;
 }
 
-.rodape > * {
+.icones > * {
     text-align: center;
     position: relative;
     min-width: 300px;
     padding: 0 20px;
 }
 
-.rodape > div:not(:last-child) {
+.icones > div:not(:last-child) {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -143,13 +143,12 @@ footer {
 }
 
 
-/* =========================================
-   FOOTER DO SITE
-========================================= */
 
-.rodape-site {
-    width: 100%;
-    padding: 15px 7%;
+/* =========================================
+   FOOTER
+========================================= */
+.rodape {
+    padding: 35px var(--margem-lateral);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -157,14 +156,11 @@ footer {
     border-top: 1px solid var(--borda);
     color: var(--texto-fraco);
 }
-
-.rodape-site strong {
+.rodape strong {
     color: var(--branco);
-    font-size: 13px;
 }
-
-.rodape-site p {
-    font-size: 11px;
+.rodape p {
+    font-size: 0.9rem;
 }
 
 
