@@ -31,33 +31,102 @@ body {
     padding: 0;
 }
 
+/* Header */
 .cabecalho {
-    width: 100%;
-    padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 30px var(--margem-lateral);
 }
 
 .cabecalho__nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.btn__cabecalho {
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    padding: 10px 20px;
+/* Botões */
+.btn {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
 }
 
-.btn__cabecalho:hover {
+.btn-outline {
+  background-color: transparent;
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  color: #ffffff;
+}
+
+.btn-outline:hover {
   background-color: rgba(160, 32, 240, 0.2);
 }
 
+.btn-preenchido {
+  background-color: #a020f0;
+  border: none;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 15px;
+}
 
+.btn-preenchido:hover {
+  background-color: #8a1bd1;
+}
+
+.btn-borda {
+  background-color: transparent;
+  /* border: 2px solid #a020f0; */
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  max-width: 260px;
+}
+
+.btn-borda:hover {
+  background-color: rgba(160, 32, 240, 0.2);
+}
+
+/* Introdução / Logo */
+.introducao {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 2.5rem;
+}
+
+.introducao-conteudo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-introducao {
+    display: block;
+}
+
+.logo-introducao img {
+    display: block;
+    height: 15rem;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .logo-introducao img {
+    height: 9rem;
+  }
+}
+
+/* Conteúdo */
 .conteudo {
     margin: 0 var(--margem-lateral);
     padding: 2.5rem 0 3rem;
@@ -78,18 +147,6 @@ body {
     justify-content: center;
 }
 
-.logo-introducao {
-    display: block;
-}
-
-.logo-introducao img {
-    display: block;
-    height: 15rem;
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 .bloco h2 {
     margin: 0 0 0.75rem;
     font-size: 2rem;
@@ -105,13 +162,12 @@ body {
 
 .bloco p {
     margin: 0;
-    font-size: 1,2rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.02em;
     text-align: left;
 }
-
 
 /* =========================================
    FOOTER
