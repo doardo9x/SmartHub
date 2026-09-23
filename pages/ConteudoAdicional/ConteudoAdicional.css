@@ -172,7 +172,8 @@ body {
 /* Tabela */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin-top: 1.5rem;
     border: 1px solid var(--borda);
     border-radius: var(--Radius-padrao);
@@ -207,13 +208,14 @@ tr:hover {
 }
 
 @media (max-width: 700px) {
-    table {
+    th {
+        padding: 12px 10px;
         font-size: 0.9rem;
     }
 
-    th,
     td {
-        padding: 12px;
+        padding: 12px 10px;
+        font-size: 0.85rem;
     }
 }
 
