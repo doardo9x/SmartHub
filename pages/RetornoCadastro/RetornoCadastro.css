@@ -12,6 +12,7 @@
     --borda: #333333;
     --texto-fraco: #aaaaaa;
     --branco: #ffffff;
+    --margem-lateral: 7%;
 }
 
 * {
@@ -184,8 +185,6 @@ footer {
 ========================================= */
 
 @media (max-width: 850px) {
-
-@media (max-width: 850px) {
     .cabecalho {
         justify-content: space-between;
     }
@@ -207,8 +206,23 @@ footer {
         display: flex;
     }
 
-    /* resto do bloco (rodapé) continua igual */
-}
+    .icones {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .icones > * {
+        min-width: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .icones > div:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 20px;
+    }
+
     .rodape {
         flex-direction: column;
         gap: 30px;
